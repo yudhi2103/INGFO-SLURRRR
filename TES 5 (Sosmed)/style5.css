@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background: rgb(3, 2, 2);
+}
+
+.menu_pilihan {
+    border-radius: 20px;
+    padding: 20px;
+    width: 380px;
+    margin: 150px auto;
+    background-color: #ffd35b;
+}
+
+.menu_pilihan .tombol_menu {
+    display: flex;
+    height: 55px;
+    color: black;
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.tombol_menu i {
+    font-size: 25px;
+    transition: 0.2s;
+}
+
+.menu_pilihan.active .tombol_menu i {
+    transform: rotate(-180deg);
+}
+
+.menu_pilihan .sosmeds {
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .15);
+    display: none;
+}
+
+.menu_pilihan.active .sosmeds {
+    display: block;
+}
+
+.sosmeds .sosmed {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background: transparent;
+}
+
+.sosmeds .sosmed:hover {
+    background: rgba(194, 194, 194, 0.329);
+}
+
+.sosmed i {
+    margin-right: 12px;
+    font-size: 28px;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.sosmed .sosmed_teks a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}

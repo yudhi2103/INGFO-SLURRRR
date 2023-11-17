@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100%;
+    color: aliceblue;
+    box-sizing: border-box;
+    background-image: url(Gambar/cropped-7680-4320-1306076.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* HEADER (DHIJAUCODE) */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+span {
+    color: yellowgreen;
+}
+
+.name {
+    font-weight: 520;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 1.30rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    transition: .50s ease;
+}
+
+.navbar a:hover {
+    color: #718335;
+    font-weight: 800;
+}
+
+#check {
+    display: none;
+}
+
+.header .menu {
+    position: absolute;
+    right: 5%;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* WELCOME TO MY WEBSITE */
+
+.kotak_jam {
+    align-items: center;
+    height: 230px;
+    width: 500px;
+    margin: 80px auto;
+    text-align: center;
+    transform: translateY(50px);
+    padding: 20px ;
+    background-color: rgba(59, 59, 59, 0.856);
+    border-radius: 30px;
+}
+
+.kotak_jam h1 {
+    color: yellowgreen;
+}
+
+.kotak_jam p {
+    margin-top: 10px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 20px;
+}
+
+#clock {
+    color: yellowgreen;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: 2px solid darkgrey;
+    width: 220px;
+    margin: 10px auto;
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+/* SERVICE (LAYANAN-LAYANAN) */
+
+.layanan {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.service_content {
+    padding: 5% 8%;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service h1 {
+    /* background-color: blue; */
+    width: 100%;
+    text-align: center;
+    /* border-radius: 10px; */
+    margin-top: -50px;
+    color: yellowgreen;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.card_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px 30px;
+    margin-top: 50px;
+}
+
+.card {
+    height: 200px;
+    width: 250px;
+    background-color: #1c2335;
+    padding: 3% 8%;
+    border: 0.2px solid yellowgreen;
+    border-radius: 8px;
+    transition: .6s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: -200px;
+    width: 120%;
+    transform: rotate(50deg);
+    background-color: white;
+    height: 18px;
+    filter: blur(30px);
+    opacity: 0.5s;
+    transition: 0.4s;
+}
+
+.card:hover {
+    background-color: rgb(22, 31, 31);
+    transform: translateY(-50px);
+    border-color: blue;
+    cursor: pointer;
+}
+
+.card:hover:after {
+    width: 225%;
+    top: -100%;
+}
+
+.card i {
+    color: yellowgreen;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.card:hover i {
+    color: blue;
+}
+
+.card h2 {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card p {
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    margin: 12px 0;
+    color: white;
+}
+
+
+@media screen and (max-width : 120px) {
+    .card_content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width : 900px) {
+    .card_content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 760px) {
+    .menu {
+        display: inline-flex;
+    }
+
+    #check:checked~.menu #icon_menu {
+        display: none;
+    }
+
+    .menu #close_menu {
+        display: none;
+    }
+
+    #check:checked~.menu #close_menu {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        top: 100%;
+        left: 0;
+        background: rgba(255, 255, 255, .15);
+        backdrop-filter: blur(50px);
+        overflow: hidden;
+        transition: .2s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1rem;
+        margin: 1.5rem;
+        text-align: center;
+        transform: translateY(-50px);
+        transition: .2s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+    }
+}

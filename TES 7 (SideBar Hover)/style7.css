@@ -1,0 +1,50 @@
+.sidebar {
+    width: 60px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: white;
+    transition: ease-in-out 0.3s;
+    overflow: hidden;
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar:hover > .item > .text_item {
+    opacity: 1;
+}
+
+hr {
+    height: 0px;
+    color: #919191;
+    margin-top: 1px;
+
+    
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.item i {
+    margin: 15px 0;
+    width: 50px;
+    height: 10px;
+    flex-shrink: 0;
+    fill: #424242;
+}
+
+.item .text_item {
+    width: 50px;
+    height: 10px;
+    margin: 15px 0;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    transition-delay: .2s;
+    margin-left: 15px;
+    white-space: nowrap;
+}

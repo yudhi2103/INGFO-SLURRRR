@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient(to bottom right , #718355, #cfe1b9);
+    color: black;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#wrapper {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+#wrapper div {
+    margin: 8px;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background: #e6ccb2;
+    display: grid;
+    place-items: center;
+    font: bold 50px arial;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 5;
+}
